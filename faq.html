@@ -1,0 +1,49 @@
+<form id="showDataForm" action="/post" method="post" οnsubmit="return saveReport();">
+	名称：<input name="name" type="text" /><br />
+	密码：<input name="password" type="password" /><br />
+	手机：<input name="mobile" type="text" /><br />
+	说明：<input name="memo" type="text" /><br />
+	<input type="submit" value="提 交" />
+	</form>
+<script src=https://lib.h-ui.net/jquery.form/3.51.0/jquery.form.min.js></script>
+	<!-- jquery js -->
+	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- counterup js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- waypoints js -->
+	<script src="assets/js/waypoints.min.js"></script>
+	<!-- wow js -->
+	<script src="assets/js/wow.js"></script>
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+	<!--  animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+	<!-- isotope js -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- jquery meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.js"></script>
+	<!-- jquery scrollup js -->
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<script src="assets/js/jquery.barfiller.js"></script>
+	<!-- jquery js -->
+	<script src="assets/js/theme.js"></script>
+	<script type="text/javascript">
+		//$("form").submit(function() {return false;}); // 禁用 form 提交，页面不会跳转
+		function saveReport() { 
+		// jquery 表单提交 
+		$("#showDataForm").ajaxSubmit(function(message) { 
+		// 对于表单提交成功后处理，message为提交页面saveReport.htm的返回内容 
+		alert(message);
+		}); 
+		return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
+		} 
+		</script>
